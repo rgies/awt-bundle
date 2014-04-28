@@ -1,0 +1,51 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AwtBundle:Default:printTicket{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/awt/css/ticket.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('bundles/awt/css/ticket_print.css') }}" rel="stylesheet" media="print">
+    <link href="{{ asset('bundles/awt/css/ticket_screen.css') }}" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <!--<div class="page-header"></div>-->
+    <form id="kanban_form"  action="" method="POST">
+        <div id="card-container">
+            <div id="card">
+                <div id="description">
+                    <textarea name="title" id="text">{{ title }}</textarea>
+                </div>
+                <div id="metaarea" class="b-l" style="{{ type.isBackgroundFilled ? 'background-color:' ~ type.backgroundColor : ''}}">
+                    <div id="type" class="small-meta" style="background-color: {{ type.backgroundColor }}">
+                        <p>{{ type.name }}</p>
+                        <input type="hidden" name="type" value="{{ type.name }}"/>
+                    </div>
+                    <div id="ticketnumber" class="big-meta">
+                        <p>#{{ issue }}</p>
+                        <input type="hidden" name="id" value="{{ id }}"/>
+
+                    </div>
+                    <div id="created-at" class="second b-b big-meta">
+                        <p>created:</p>
+                        <p>{{ created }}</p>
+                        <input type="hidden" name="created" value="{{ created }}"/>
+                    </div>
+                    <div id="reported-by" class="second big-meta">
+                        <p>reported by</p>
+                        <p>{{ reporter }}</p>
+                        <input type="hidden" name="reporter" value="{{ reporter }}"/>
+                    </div>
+                    <a href="{{ url }}" target="_blank">
+                        <img id="qr" src="http://chart.apis.google.com/chart?cht=qr&chs=190x190&chld=H|0&chl={{ id }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+
+    </form>
+</div>
+{% endblock %}

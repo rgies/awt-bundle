@@ -1,0 +1,30 @@
+{% extends "::base.html.twig" %}
+{% block title %}Print Ticket{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Print Ticket View</h1>
+        </div>
+        <form id="dataForm1" name="dataForm1" role="form" method="post" action="">
+            <!-- Form Name -->
+            <legend>Ticket</legend>
+
+            <!-- Issue input-->
+            <div class="form-group">
+                <label for="textinput">Issue Number*</label>
+                <input id="textinput" name="issue" type="text" placeholder="" class="form-control " required="required">
+                <p class="help-block">Please insert here the Jira Ticket number</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <div class="control">
+                    <button id="singlebutton" name="singlebutton" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+            <!-- Form Validation-->
+            <script>$("#dataForm").validate();</script>
+        </form>
+    </div>
+{% endblock %}
