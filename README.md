@@ -31,8 +31,8 @@ Then register the bundle in the `app/AppKernel.php` file:
 
 Add the required routing settings in the `app\config\routing.yml` file:
 
-  awt:
-    resource: "@AwtBundle/Controller/"
-    type: annotation
-    prefix: /
+	awt:
+    	resource: "@AwtBundle/Controller/"
+    	type:	annotation
+    	prefix:	/
     
