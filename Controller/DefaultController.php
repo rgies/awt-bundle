@@ -49,7 +49,7 @@ class DefaultController extends Controller
      */
     public function printTicketAction($issue)
     {
-        $config = $this->container->getParameter('awt_jira_connector');
+        $config = $this->container->getParameter('awt.jira_connector');
 
         $http   = $config['protocol'];
         $url    = $config['url'];
