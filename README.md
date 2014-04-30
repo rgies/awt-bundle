@@ -36,3 +36,12 @@ Add the required routing settings in the `app\config\routing.yml` file:
     	type:	annotation
     	prefix:	/
     
+Add the jira configuration in the `app\config\config.yml` file:
+
+	# Agile Workgroup Tool Configuration
+	awt:
+	    jira_connector:
+	        protocol: https
+	        url: jira.your_domain.com
+	        login: xxx
+	        password: xxx
