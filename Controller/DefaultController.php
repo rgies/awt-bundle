@@ -1,6 +1,6 @@
 <?php
 
-namespace Rgies\AwtBundle\Controller;
+namespace RGies\AwtBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

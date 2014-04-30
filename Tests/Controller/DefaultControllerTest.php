@@ -1,6 +1,6 @@
 <?php
 
-namespace Rgies\AwtBundle\Tests\Controller;
+namespace RGies\AwtBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

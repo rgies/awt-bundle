@@ -1,6 +1,6 @@
 <?php
 
-namespace Rgies\AwtBundle;
+namespace RGies\AwtBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
