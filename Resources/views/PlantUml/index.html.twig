@@ -9,11 +9,15 @@
     </div>
     <p>
         <form>
-            <textarea id="inflated" cols="64" rows="16">Bob->Alice : hello</textarea>
-            <p>
-                <input type="submit" onclick="compress($('inflated').value);return false;">
-            <p>
-            <img id="im" src="http://www.plantuml.com/plantuml/img/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000"/>
+            <div style="float: left;">
+                <textarea id="inflated" cols="64" rows="16">Bob->Alice : hello</textarea>
+                <p>
+                    <input type="submit" onclick="compress($('inflated').value);return false;">
+                <p>
+            </div>
+            <div>
+                <img id="im" style="padding-left: 20px" src="http://www.plantuml.com/plantuml/img/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000"/>
+            </div>
         </form>
     </p>
 </div>
