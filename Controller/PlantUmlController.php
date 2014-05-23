@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class PlantUmlController extends Controller
 {
     /**
-     * @Route("/index/", name="plantUml")
+     * @Route("/uml-editor/", name="plantUml")
      * @Template()
      */
     public function indexAction()
