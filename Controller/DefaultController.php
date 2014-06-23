@@ -73,6 +73,7 @@ class DefaultController extends Controller
         $params['created']      = $this->_formatDate($ticket->fields->created);
         $params['reporter']     = $ticket->fields->reporter->name;
         $params['url']          = sprintf ('%s://%s/browse/%s', $http, $url, $key);
+        list($params['project'], $params['number']) = explode('-', $key);
         $params['type']         = array(
             'name' => $ticket->fields->issuetype->name,
             'isBackgroundFilled' => false,
